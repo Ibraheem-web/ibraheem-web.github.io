@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Raleway&display=swap" rel="stylesheet">
+    {{- $tailwindCSS := resources.Get "css/output.css" -}}
+    <link rel="stylesheet" href="{{ $tailwindCSS.Permalink | absURL }}">
+    <title>Document</title>
+    <style>
+        .rotate45 {
+            rotate: 45deg;
+            transform: translateY(6px);
+            padding-top: 1px;
+        }
+        .-rotate45 {
+            padding-top: 1px;
+            rotate: -45deg;
+            transform: translateY(-6px);
+        }
+
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .lato {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .raleway {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .flex0 {
+            flex: 0 0 auto;
+        }
+
+        .custom-transition {
+            transition: transform 0.5s ease-in-out;
+        }        
+
+        * {
+            @apply transition-colors duration-200;
+        }
+    </style>
+</head>
+<body class="toggleMode overflow-x-hidden 2xl:max-w-7xl 2xl:mx-auto">
+    <head>
+        {{ partial "header.html" . }}
+    </head>
+    <main>
+        {{ block "main" . }}
+
+        {{ end }}
+    </main>
+    <footer>
+        {{ partial "footer.html" . }}
+    </footer>
+
+    {{ partial "javascript.html" . }}
+</body>
+</html>

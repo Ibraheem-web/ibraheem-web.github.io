@@ -1,0 +1,15 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+[params]
+    logo = '/images/logo.png'
+
+[[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+[[menu.main]]
+    name = 'About'
+    url = 'about'
+    weight = 2

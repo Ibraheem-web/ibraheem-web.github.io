@@ -1,0 +1,30 @@
+<nav class="bg-[#007FFF] dark:shadow-inner dark:shadow-slate-700">
+    <nav class="w-full h-full flex px-3 justify-between items-center" id="header">
+        <nav class="w-24 h-24">
+            <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo }}" alt="logo" class="w-full h-full"></a>
+        </nav>
+        <nav class="flex items-center pr-0">
+            <nav>
+                <nav class="relative -right-96 hidden duration-200 delay-150 top-16 sm:static sm:right-0 sm:opacity-100 sm:-mr-0 sm:duration-0 sm:delay-0" id="mainMenu">
+                    <ul class="py-5 bg-[#007fff] w-32 text-center rounded-lg dark:shadow-slate-700 dark:shadow-inner sm:bg-transparent sm:flex sm:dark:bg-transparent sm:w-full">
+                        {{ range .Site.Menus.main }}
+                        <a href="{{ .URL }}" class="text-lg text-slate-200 hover:text-slate-300 dark:text-slate-800 dark:hover:text-slate-900 font-sans hover:-translate-y-1 transition-transform py-3 sm:px-5"><li class="list-none">{{ .Name }}</li></a>
+                        {{ end }}
+                    </ul>
+                </nav>
+            </nav>
+            <nav class="flex gap-x-2">
+                <nav>
+                    <button id="toggleModeBtn" title="Dark/Light">{{ partial "fonts/dark-light.html" . }}</button>
+                </nav>
+                <nav class="sm:hidden">
+                    <button class="flex flex-col gap-1" id="hamburger">
+                        <span class="w-7 h-1 bg-[#ffff] rounded-lg duration-200" id="line1"></span>
+                        <span class="w-7 h-1 bg-[#ffff] rounded-lg duration-200" id="line2"></span>
+                        <span class="w-7 h-1 bg-[#ffff] rounded-lg duration-200" id="line3"></span>
+                    </button>
+                </nav>
+            </nav>
+        </nav>
+    </nav>
+</nav>
