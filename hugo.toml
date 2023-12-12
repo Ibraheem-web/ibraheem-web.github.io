@@ -3,7 +3,7 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 
 [params]
-    logo = '/images/logo.png'
+    logo = './images/logo.png'
 
 [[menu.main]]
     name = 'Home'
