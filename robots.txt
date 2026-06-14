@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://ibraheem-web.github.io/sitemap.xml
