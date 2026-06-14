@@ -1,0 +1,6 @@
+# MI. — Portfolio
+# TODO: replace your-domain.com with the real deployed domain.
+User-agent: *
+Allow: /
+
+Sitemap: https://your-domain.com/sitemap.xml
